@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Noticias</title>
+    <link rel="stylesheet" href="stylesIndex.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>📰 Buscador de Noticias</h1>
+        <p>Encuentra las noticias más relevantes de múltiples periódicos en tiempo real.  
+           Introduce una palabra clave y descubre qué está ocurriendo en el mundo.</p>
+        
+        <div class="search-box">
+            <input type="text" id="busqueda" placeholder="Escribe tu búsqueda...">
+            <button onclick="buscar()">🔎 Buscar</button>
+        </div>
+
+        <p class="info">📌 Puedes buscar temas como: <strong>política, economía, deportes, tecnología, cultura...</strong></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Buscador de Noticias | Web Scraping en Tiempo Real</p>
+    </footer>
+
+    <script>
+        function buscar() {
+            let query = document.getElementById('busqueda').value.trim();
+            if (query.length === 0) {
+                alert("Por favor, introduce un término de búsqueda.");
+                return;
+            }
+            window.location.href = `/resultados.html?q=${query}`;
+        }
+    </script>
+</body>
+</html>

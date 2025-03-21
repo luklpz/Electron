@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="stylesResultados.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📢 Noticias Encontradas</h1>
+        <p>Resultados de búsqueda para "<span id="search-term"></span>"</p>
+
+        <div class="news-grid" id="listaNoticias"></div>
+
+        <button class="back-btn" onclick="window.location.href='index.html'">⬅ Volver al Inicio</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('q');
+        document.getElementById("search-term").textContent = query;
+
+        fetch(`/buscar?q=${query}`)
+            .then(res => res.json())
+            .then(noticias => {
+                let lista = document.getElementById('listaNoticias');
+                lista.innerHTML = '';
+
+                if (noticias.length === 0 || noticias[0].titulo.includes("No se encontraron")) {
+                    lista.innerHTML = "<p class='no-results'>❌ No se encontraron noticias relevantes.</p>";
+                    return;
+                }
+
+                noticias.forEach(noticia => {
+                    let newsCard = document.createElement('div');
+                    newsCard.classList.add('news-card');
+
+
+                    let title = document.createElement('h3');
+                    title.innerHTML = noticia.titulo;
+
+                    let link = document.createElement('a');
+                    link.href = noticia.enlace;
+                    link.target = "_blank";
+                    link.textContent = "Leer más";
+
+                    newsCard.appendChild(title);
+                    newsCard.appendChild(link);
+
+                    lista.appendChild(newsCard);
+                });
+            })
+            .catch(error => console.error("Error al obtener noticias:", error));
+    </script>
+</body>
+</html>

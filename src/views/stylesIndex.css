@@ -1,0 +1,99 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Título principal */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+/* Texto descriptivo */
+.container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Caja de búsqueda */
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input de búsqueda */
+.search-box input[type="text"] {
+    flex: 1 1 60%;
+    min-width: 200px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input[type="text"]:focus {
+    border-color: #00b4d8;
+    outline: none;
+}
+
+/* Botón de búsqueda */
+.search-box button {
+    background: #00b4d8;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0077b6;
+}
+
+/* Mensaje de ayuda */
+.info {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #888;
+    text-align: center;
+}

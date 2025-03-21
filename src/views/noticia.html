@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Noticia</title>
+    <link rel="stylesheet" href="stylesNoticia.css">
+</head>
+<body>
+    <div id="contenido"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        fetch(`/noticia?url=${params.get('url')}`)
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('contenido').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
