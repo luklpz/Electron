@@ -10,11 +10,13 @@ El proyecto está estructurado de la siguiente manera:
 - **src/**
   - `server.js`: Archivo principal que inicia el servidor en localhost y gestiona las rutas.
   - `scraper.js`: Contiene la lógica de web scraping, obteniendo titulares, enlaces e imágenes de las noticias.
-- **views/** 
-  - `index.html`: Página principal con el buscador de noticias.
-  - `resultados.html`: Página donde se muestran los resultados de la búsqueda.
-  - `noticia.html`: Página donde se carga el contenido de una noticia seleccionada.
-  - `styles.css`: Archivo CSS para mejorar la apariencia de la aplicación.
+    - **views/** 
+      - `index.html`: Página principal con el buscador de noticias.
+      - `stylesIndex.css`: Archivo CSS para mejorar la apariencia de index.html.
+      - `resultados.html`: Página donde se muestran los resultados de la búsqueda.
+      - `stylesResultados.css`: Archivo CSS para mejorar la apariencia de resultados.html.
+      - `noticia.html`: Página donde se carga el contenido de una noticia seleccionada.
+      - `stylesNoticia.css`: Archivo CSS para mejorar la apariencia de noticia.html.
 - **main.js**: Archivo de configuración para ejecutar la aplicación en Electron.
 - **package.json**: Archivo de configuración del proyecto con las dependencias utilizadas.
 
