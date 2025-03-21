@@ -53,5 +53,5 @@ Para ejecutar la aplicación, basta con seguir los siguientes pasos:
  
  A pesar de estas dificultades, el resultado final es muy satisfactorio para el tiempo que ha tomado desarrollarlo. La aplicación funciona correctamente, permitiendo obtener noticias de múltiples fuentes y las muestra con una interfaz clara y bien organizada. 
  
- En general, considero que he hecho un buen trabajo, superando los obstáculos técnicos y logrando un resultado, que aunque presente algún altibajo debido a la complejidad del scrapping en periodicos web, es muy positivo y que, por la calidad del trabajo realizado, la resolución de problemas enfrentados y el resultado final obtenido, este proyecto merece una calificación de 9 o 10.
+ En general, considero que he hecho un buen trabajo, superando los obstáculos técnicos y logrando un resultado, que aunque presente algún altibajo debido a la complejidad del scrapping en periodicos web, es muy positivo; y que, por la calidad del trabajo realizado, la resolución de problemas enfrentados y el resultado final obtenido, este proyecto merece una calificación de 9 o 10.
  
